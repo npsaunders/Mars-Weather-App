@@ -3,11 +3,25 @@
 }
 
 body {
+  /* display: flex;
+  flex-direction: column; */
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
-  /* background-color: black; */
   color: rgb(201, 0, 0);
-  text-align: center;
+  /* text-align: center; */
   background-image: url("../imgs/mars_corner-2.png");
   background-repeat: no-repeat;
+  background-color: black;
+}
+
+header {
+  /* display: flex; */
+  font-size: 40px;
+  justify-content: center;
+}
+
+#sub-heading {
+  /* display: flex; */
+  font-size: 20px;
+  justify-content: center;
 }
