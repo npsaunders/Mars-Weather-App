@@ -24,7 +24,7 @@ The **[Curiosity Rover](https://mars.nasa.gov/msl/home/)** .... more facts
 
 ---
 
-SCREEN SHOTS GO HERE (app/wirefram)
+SCREEN SHOTS GO HERE (app/wireframe)
 
 ---
 
