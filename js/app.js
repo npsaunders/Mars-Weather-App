@@ -74,7 +74,7 @@ function handleGetData(event) {
 }
 
 function render() {
-  $earthDt.text(marsWeatherData.terrestrial_date.slice(0, 9));
+  $earthDt.text(marsWeatherData.terrestrial_date.slice(0, 10));
   $min_temp.text(marsWeatherData.min_temp);
   $max_temp.text(marsWeatherData.max_temp);
   $sunrise.text(marsWeatherData.sunrise);
