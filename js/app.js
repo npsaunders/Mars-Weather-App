@@ -34,22 +34,50 @@
 //   "TZ_Data": "America/Port_of_Spain"}
 //
 //
-//  ---- Ensure jQuery loaded first
-$(document).ready(function () {
-
-
-
-  // ----- Variables
-
-
-  // ----- FUNCTIONS
-  //
-
-  // ----- Click Submit Button
-  //Check to see if a value has been entered. If not, do nothing
 
 
 
 
-  //close jQuery loaded function
-});
+let marsWeatherData, userInput;
+
+const $season = $('#season');
+const $min_temp = $('#minTemp');
+const $max_temp = $('#maxTemp');
+const $sunrise = $('#sunrise');
+const $sunset = $('#sunset');
+const $atmCond = $('#atmCond');
+const $inputSol = $('input[type="text"]');
+const $solNum = $('#solNum');
+
+$('form').on('submit', handleGetData);
+
+function handleGetData(event) {
+  event.preventDefault();
+  // calling preventDefault() on a 'submit' event will prevent a page refresh  
+  userInput = $inputSol.val();
+  //Need to validate input
+  //valid input >0, integer, max = today's date converted to sols
+
+  // getting the user input
+  $.ajax({
+    url: 'https://api.maas2.apollorion.com/' + userInput
+  }).then(
+    (data) => {
+      marsWeatherData = data;
+      render();
+    },
+    (error) => {
+      console.log('bad request', error);
+    }
+  );
+}
+
+function render() {
+  let x = $season.text(marsWeatherData.season);
+  $min_temp.text(marsWeatherData.min_temp);
+  $max_temp.text(marsWeatherData.max_temp);
+  $sunrise.text(marsWeatherData.sunrise);
+  $sunset.text(marsWeatherData.sunset);
+  $atmCond.text(marsWeatherData.atmo_opacity);
+  $solNum.text(marsWeatherData.sol);
+}

@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: "Averox", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   color: rgb(201, 0, 0);
   background-image: url("../imgs/mars_corner-2.png");
   background-repeat: no-repeat;
@@ -26,4 +26,9 @@ div {
 div > header {
   font-size: 50px;
   align-content: center;
+}
+
+table {
+  font-size: 20px;
+  font-weight: 900;
 }
