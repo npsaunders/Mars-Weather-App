@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Averox";
-  src: url("./../font/Averox-rgY9y.ttf");
+  src: url("./../font/Averox-MVyRJ.otf");
 }
 
 * {
@@ -15,6 +15,7 @@ body {
   background-image: url("../imgs/mars_corner-2.png");
   background-repeat: no-repeat;
   background-color: black;
+  font-family: "Averox", Helvetica, Arial, sans-serif;
 }
 
 div {
@@ -23,12 +24,30 @@ div {
   align-items: center;
 }
 
-div > header {
+div > header,
+.rowLabel,
+#tableHeader {
   font-size: 50px;
+  font-family: "Averox", Helvetica, Arial, sans-serif;
   align-content: center;
 }
 
-table {
-  font-size: 20px;
-  font-weight: 900;
+.rowLabel,
+#tableHeader {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#solNum,
+.rowVal {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+form > div {
+  flex-direction: row;
+  margin: 20px auto;
+  /* width: 500px; */
+  justify-content: center;
 }

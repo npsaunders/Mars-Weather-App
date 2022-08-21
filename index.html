@@ -24,37 +24,44 @@
     <main>
 
       <form>
-        <input type="text" id="sol" placeholder="Enter Sol (day #)">
-        <input type="submit" />
+        <div>
+          <input type="text" id="sol" placeholder="Enter Sol (day #)">
+          <input id="submitBut" type="submit" />
+        </div>
       </form>
 
       <table border="1">
         <thead>
           <tr>
-            <th colspan="2" id="tableHeader">Weather Conditions for sol# <span id="solNum"></span></th>
+            <th colspan="2" id="tableHeader">Weather Conditions for sol <span id="solNum"></span></th>
           </tr>
         </thead>
         <tbody>
+
           <tr>
-            <td>Season:</td>
-            <td id="season"></td>
-          </tr>
-          <tr>
-            <td>Min_Temp:</td>
-            <td id="minTemp"></td>
-          </tr>
-          <td>Max_Temp:</td>
-          <td id="maxTemp"></td>
-          </tr>
-          <td>Sunrise:</td>
-          <td id="sunrise"></td>
-          </tr>
-          <td>Sunset:</td>
-          <td id="sunset"></td>
+            <td class="rowLabel">Earth Date</td>
+            <td class="rowVal" id="earthDt"></td>
           </tr>
           <tr>
-            <td>Atm_Condition:</td>
-            <td id="atmCond"></td>
+            <td class="rowLabel">Min - Temp</td>
+            <td class="rowVal" id="minTemp"></td>
+          </tr>
+          <td class="rowLabel">Max - Temp</td>
+          <td class="rowVal" id="maxTemp"></td>
+          </tr>
+          <td class="rowLabel">Sunrise</td>
+          <td class="rowVal" id="sunrise"></td>
+          </tr>
+          <td class="rowLabel">Sunset</td>
+          <td class="rowVal" id="sunset"></td>
+          </tr>
+          <tr>
+            <td class="rowLabel">Atm - Condition</td>
+            <td class="rowVal" id="atmCond"></td>
+          </tr>
+          <tr>
+            <td class="rowLabel">Season</td>
+            <td class="rowVal" id="season"></td>
           </tr>
         </tbody>
       </table>

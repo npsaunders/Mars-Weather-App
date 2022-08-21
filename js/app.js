@@ -40,12 +40,13 @@
 
 let marsWeatherData, userInput;
 
-const $season = $('#season');
+const $earthDt = $('#earthDt');
 const $min_temp = $('#minTemp');
 const $max_temp = $('#maxTemp');
 const $sunrise = $('#sunrise');
 const $sunset = $('#sunset');
 const $atmCond = $('#atmCond');
+const $season = $('#season');
 const $inputSol = $('input[type="text"]');
 const $solNum = $('#solNum');
 
@@ -73,11 +74,12 @@ function handleGetData(event) {
 }
 
 function render() {
-  let x = $season.text(marsWeatherData.season);
+  $earthDt.text(marsWeatherData.terrestrial_date.slice(0, 9));
   $min_temp.text(marsWeatherData.min_temp);
   $max_temp.text(marsWeatherData.max_temp);
   $sunrise.text(marsWeatherData.sunrise);
   $sunset.text(marsWeatherData.sunset);
   $atmCond.text(marsWeatherData.atmo_opacity);
+  $season.text(marsWeatherData.season);
   $solNum.text(marsWeatherData.sol);
 }
