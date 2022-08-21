@@ -14,48 +14,54 @@
 </head>
 
 <body>
-  <header>
-    <h1>Mars Weather</h1><br>
-  </header>
-  <div id="sub-heading">
-    <h3>Curiosity Rover</h3>
+
+  <div>
+
+    <header>
+      <h1>Mars Weather</h1>
+    </header>
+
+    <main>
+
+      <form>
+        <input type="text" id="sol" placeholder="Enter Sol (day #)">
+        <input type="submit" />
+      </form>
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th colspan="2">Weather Conditions for <span id="solNum"></span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Season:</td>
+            <td id="season"></td>
+          </tr>
+          <tr>
+            <td>Min_Temp:</td>
+            <td id="minTemp"></td>
+          </tr>
+          <td>Max_Temp:</td>
+          <td id="maxTemp"></td>
+          </tr>
+          <td>Sunrise:</td>
+          <td id="sunrise"></td>
+          </tr>
+          <td>Sunset:</td>
+          <td id="sunset"></td>
+          </tr>
+          <tr>
+            <td>Atm_Condition:</td>
+            <td id="atmCond"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </main>
+
   </div>
-  <main>
-    <form>
-      <input type="text" id="sol" placeholder="Enter Sol (day #)">
-      <input type="submit" />
-    </form>
-    <table border="1">
-      <thead>
-        <tr>
-          <th colspan="2">Weather Conditions for <span id="solNum"></span></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Season:</td>
-          <td id="season"></td>
-        </tr>
-        <tr>
-          <td>Min_Temp:</td>
-          <td id="minTemp"></td>
-        </tr>
-        <td>Max_Temp:</td>
-        <td id="maxTemp"></td>
-        </tr>
-        <td>Sunrise:</td>
-        <td id="sunrise"></td>
-        </tr>
-        <td>Sunset:</td>
-        <td id="sunset"></td>
-        </tr>
-        <tr>
-          <td>Atm_Condition:</td>
-          <td id="atmCond"></td>
-        </tr>
-      </tbody>
-    </table>
-  </main>
   <!-- <aside>
     <img src=" ./imgs/Curiosity_Location_Sol597.jpg" height="500px" width="800px" />
   </aside> -->
