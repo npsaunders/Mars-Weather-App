@@ -39,6 +39,12 @@
 // If JavaScript can't be loaded, only show the error image
 $('#main').css('display', 'flex');
 
+//get today's date in the form mm/dd/yyyy
+const maxDate = new Date().toISOString().slice(0, 10);
+
+//now set the max date attribute in the date picker
+$('#start').attr("max", maxDate);
+
 let marsWeatherData, userInput;
 
 const $earthDt = $('#earthDt');
@@ -48,7 +54,7 @@ const $sunrise = $('#sunrise');
 const $sunset = $('#sunset');
 const $atmCond = $('#atmCond');
 const $season = $('#season');
-const $inputSol = $('input[type="text"]');
+const $inputSol = $('input[type="date"]');
 const $solNum = $('#solNum');
 
 $('form').on('submit', returnDataAndDisplay);
@@ -57,9 +63,7 @@ function returnDataAndDisplay(event) {
   //prevents page refresh after clicking the submit button
   event.preventDefault();
   userInput = $inputSol.val();
-  if (userInput === '') {
-    userInput = '1'
-  }
+  console.log('datae entere', userInput, typeof (userInput))
 
 
   // AJAX call to get data

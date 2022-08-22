@@ -50,12 +50,11 @@ form > div {
   justify-content: center;
 }
 
-#sol,
+#start,
 #submitBut {
-  height: 30px;
-  font-size: 14pt;
   padding: 3px;
   margin: 3px;
+  font-size: 15px;
 }
 
 table,
