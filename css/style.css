@@ -11,11 +11,10 @@
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  color: rgb(201, 0, 0);
+  color: rgba(201, 0, 0, 0.6);
   background-image: url("../imgs/mars_corner-2.png");
   background-repeat: no-repeat;
   background-color: black;
-  font-family: "Averox", Helvetica, Arial, sans-serif;
 }
 
 div {
@@ -57,4 +56,10 @@ form > div {
   font-size: 14pt;
   padding: 3px;
   margin: 3px;
+}
+
+table,
+th,
+td {
+  border: 1px solid rgba(201, 0, 0, 0.4);
 }
