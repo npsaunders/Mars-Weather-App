@@ -35,8 +35,9 @@
 //
 //
 
-
-
+// Show the main content if JavaScript is enabled.
+// If JavaScript can't be loaded, only show the error image
+$('#main').css('display', 'flex');
 
 let marsWeatherData, userInput;
 
@@ -50,30 +51,34 @@ const $season = $('#season');
 const $inputSol = $('input[type="text"]');
 const $solNum = $('#solNum');
 
-$('form').on('submit', handleGetData);
+$('form').on('submit', returnDataAndDisplay);
 
-function handleGetData(event) {
+function returnDataAndDisplay(event) {
+  //prevents page refresh after clicking the submit button
   event.preventDefault();
-  // calling preventDefault() on a 'submit' event will prevent a page refresh  
   userInput = $inputSol.val();
-  //Need to validate input
-  //valid input >0, integer, max = today's date converted to sols
+  if (userInput === '') {
+    userInput = '1'
+  }
 
-  // getting the user input
+
+  // AJAX call to get data
   $.ajax({
     url: 'https://api.maas2.apollorion.com/' + userInput
   }).then(
+    // if ok then continue to update the DOM
     (data) => {
       marsWeatherData = data;
-      render();
+      updateDom();
     },
+    // Error. There was an issue. Notify the user.
     (error) => {
-      console.log('bad request', error);
+      alert("There was an issue with data retrieval.")
     }
   );
 }
 
-function render() {
+function updateDom() {
   $earthDt.text(marsWeatherData.terrestrial_date.slice(0, 10));
   $min_temp.text(marsWeatherData.min_temp);
   $max_temp.text(marsWeatherData.max_temp);
