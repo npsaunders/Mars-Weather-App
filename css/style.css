@@ -17,12 +17,6 @@ body {
   background-color: black;
 }
 
-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 div > header,
 .rowLabel,
 #tableHeader {
@@ -31,6 +25,41 @@ div > header,
   align-content: center;
 }
 
+/* Start off with display none. If JavaScript is working, the JavaScript code will change the display to flex. Else, the main content will not display and the noscript image will show up. */
+#main {
+  display: none;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form > div {
+  flex-direction: row;
+  margin: 20px;
+  justify-content: center;
+}
+
+/* Calendar picker & submit button */
+#start,
+#submitBut {
+  padding: 3px;
+  margin: 3px;
+  font-size: 20px;
+  background-color: black;
+  color: rgba(201, 0, 0, 0.6);
+  border: 1px solid rgba(201, 0, 0, 0.6);
+}
+
+/* since using a black background, need to invert the 
+calendar icon so user can see it */
+::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+}
+
+/* Table styling */
 .rowLabel,
 #tableHeader {
   font-size: 30px;
@@ -44,32 +73,16 @@ div > header,
   font-weight: 400;
 }
 
-form > div {
-  flex-direction: row;
-  margin: 20px;
-  justify-content: center;
-}
-
-#start,
-#submitBut {
-  padding: 3px;
-  margin: 3px;
-  font-size: 15px;
-}
-
 table,
 th,
 td {
-  border: 1px solid rgba(201, 0, 0, 0.4);
+  border: 1px solid rgba(201, 0, 0, 0.6);
   border-collapse: collapse;
 }
 
+/* If JavaScript doesn't work, display an image */
 #noJavaScript > img {
   height: 400px;
   width: 500px;
   border-radius: 50px;
-}
-
-#main {
-  display: none;
 }
