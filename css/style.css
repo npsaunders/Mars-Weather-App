@@ -107,9 +107,10 @@ td {
   #solNum,
   .rowVal {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 15x;
+    font-size: 13px;
     font-weight: 400;
   }
+
   h3 {
     font-size: 14px;
   }
