@@ -11,7 +11,7 @@
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  color: rgba(201, 0, 0, 0.6);
+  color: rgba(193, 101, 75, 0.7);
   background-image: url("../imgs/mars_corner-2.png");
   background-repeat: no-repeat;
   background-color: black;
@@ -49,8 +49,8 @@ form > div {
   margin: 3px;
   font-size: 20px;
   background-color: black;
-  color: rgba(201, 0, 0, 0.6);
-  border: 1px solid rgba(201, 0, 0, 0.6);
+  color: rgba(193, 101, 75, 0.8);
+  border: 1px solid rgb(193, 101, 75, 0.8);
 }
 
 /* since using a black background, need to invert the 
@@ -76,7 +76,7 @@ calendar icon so user can see it */
 table,
 th,
 td {
-  border: 1px solid rgba(201, 0, 0, 0.6);
+  border: 1px solid rgba(193, 101, 75, 0.8);
   border-collapse: collapse;
 }
 
