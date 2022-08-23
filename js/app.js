@@ -66,8 +66,7 @@ function returnDataAndDisplay(event) {
   //prevents page refresh after clicking the submit button
   event.preventDefault();
 
-  //convert user input of yyyy-dd-mm to Martian sols.
-  // console.log('$inputSol', new Date($inputSol.val()).getTime());
+  //convert user input of yyyy-dd-mm to Martian sols.\
   userInput = terrestrialToSols($inputSol.val());
 
   // AJAX call to get data
