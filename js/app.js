@@ -61,6 +61,7 @@ const $solNum = $('#solNum');
 
 $('form').on('submit', returnDataAndDisplay);
 
+//  ---------  FUNCTIONS  ---------
 
 function returnDataAndDisplay(event) {
   //prevents page refresh after clicking the submit button
@@ -78,9 +79,17 @@ function returnDataAndDisplay(event) {
       marsWeatherData = data;
       updateDom();
     },
-    // Error. There was an issue. Notify the user.
+    // If there's no data or an issue, just put in N/A for the values
     (error) => {
-      alert("There was an issue with data retrieval.")
+      $earthDt.text('Error');
+      $min_temp.text('No');
+      $max_temp.text('Data');
+      $sunrise.text('Available');
+      $sunset.text('For');
+      $atmCond.text('That');
+      $season.text('Date');
+      $solNum.text('  ');
+      // alert("There was an issue with data retrieval.")
     }
   );
 }
