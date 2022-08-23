@@ -88,3 +88,29 @@ td {
   width: 500px;
   border-radius: 50px;
 }
+
+/* For cell phones */
+@media screen and (max-width: 400px) {
+  body {
+    background-image: none;
+  }
+
+  div > header,
+  .rowLabel,
+  #tableHeader {
+    font-size: 15px;
+    font-family: "Averox", Helvetica, Arial, sans-serif;
+    align-content: center;
+    font-weight: 700;
+  }
+
+  #solNum,
+  .rowVal {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15x;
+    font-weight: 400;
+  }
+  h3 {
+    font-size: 14px;
+  }
+}
