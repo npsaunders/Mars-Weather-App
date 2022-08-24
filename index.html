@@ -39,7 +39,7 @@
       <div>
         <h3>Curiosity Rover Historical Weather Readings</h3>
         <h3>Utilizing the MAAS2 REST API</h3>
-        <form>
+        <!-- <form>
           <div>
             <h3>Select a date:</h3>
             <input type="date" id="start" name="trip-start" value="2012-08-07" min="2012-08-05" required>
@@ -83,8 +83,7 @@
               <td class="rowVal" id="season"></td>
             </tr>
           </tbody>
-        </table>
-
+        </table> -->
       </div>
     </main>
   </div>
@@ -116,18 +115,70 @@
           <img src='./imgs/Mars_Weather_Chart.jpg' width='600' height='400' scrolling='no' frameborder='0'></iframe>">
         </div>
       </div>
+
+
+      <!-- form & table in carousel -->
+      <div class="carousel-item">
+        <form>
+          <div>
+            <h3>Select a date:</h3>
+            <input type="date" id="start" name="trip-start" value="2012-08-07" min="2012-08-05" required>
+
+            <input id="submitBut" type="submit">
+          </div>
+        </form>
+        <!-- end data entry -->
+        <div id="table">
+          <table>
+            <thead>
+              <tr>
+                <th colspan="2" id="tableHeader">Weather Conditions for sol <span
+                    id="solNum">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="rowLabel">Earth Date</td>
+                <td class="rowVal" id="earthDt"></td>
+              </tr>
+              <tr>
+                <td class="rowLabel">Min - Temp</td>
+                <td class="rowVal" id="minTemp">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              </tr>
+              <td class="rowLabel">Max - Temp</td>
+              <td class="rowVal" id="maxTemp"></td>
+              </tr>
+              <td class="rowLabel">Sunrise</td>
+              <td class="rowVal" id="sunrise"></td>
+              </tr>
+              <td class="rowLabel">Sunset</td>
+              <td class="rowVal" id="sunset"></td>
+              </tr>
+              <tr>
+                <td class="rowLabel">Atm - Condition</td>
+                <td class="rowVal" id="atmCond"></td>
+              </tr>
+              <tr>
+                <td class="rowLabel">Season</td>
+                <td class="rowVal" id="season"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- end table -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 </body>
 
 </html>

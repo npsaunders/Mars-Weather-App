@@ -12,11 +12,11 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   color: rgba(193, 101, 75, 0.7);
-  background-image: url("../imgs/mars_corner-2.png");
+  background-image: url("../imgs/red_planet_bg.jpg");
   background-repeat: no-repeat;
   background-color: black;
   min-height: 100vh;
-  background-size: contain;
+  background-size: cover;
 }
 
 div > header,
