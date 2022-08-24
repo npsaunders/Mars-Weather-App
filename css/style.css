@@ -89,6 +89,11 @@ td {
   border-radius: 50px;
 }
 
+/* center the frames & table in the carousel */
+.carousel-inner {
+  flex-direction: row;
+}
+
 /* For cell phones */
 @media screen and (max-width: 500px) {
   body {
@@ -114,8 +119,4 @@ td {
   h3 {
     font-size: 14px;
   }
-}
-
-.carousel-inner {
-  flex-direction: row;
 }

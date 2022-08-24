@@ -39,75 +39,23 @@
       <div>
         <h3>Curiosity Rover Historical Weather Readings</h3>
         <h3>Utilizing the MAAS2 REST API</h3>
-        <!-- <form>
-          <div>
-            <h3>Select a date:</h3>
-            <input type="date" id="start" name="trip-start" value="2012-08-07" min="2012-08-05" required>
-
-            <input id="submitBut" type="submit">
-          </div>
-        </form>
-
-        <table>
-          <thead>
-            <tr>
-              <th colspan="2" id="tableHeader">Weather Conditions for sol <span
-                  id="solNum">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="rowLabel">Earth Date</td>
-              <td class="rowVal" id="earthDt"></td>
-            </tr>
-            <tr>
-              <td class="rowLabel">Min - Temp</td>
-              <td class="rowVal" id="minTemp">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            </tr>
-            <td class="rowLabel">Max - Temp</td>
-            <td class="rowVal" id="maxTemp"></td>
-            </tr>
-            <td class="rowLabel">Sunrise</td>
-            <td class="rowVal" id="sunrise"></td>
-            </tr>
-            <td class="rowLabel">Sunset</td>
-            <td class="rowVal" id="sunset"></td>
-            </tr>
-            <tr>
-              <td class="rowLabel">Atm - Condition</td>
-              <td class="rowVal" id="atmCond"></td>
-            </tr>
-            <tr>
-              <td class="rowLabel">Season</td>
-              <td class="rowVal" id="season"></td>
-            </tr>
-          </tbody>
-        </table> -->
       </div>
     </main>
   </div>
-
-  <!-- if JavaScript is disabled, notify user with modal -->
-  <noscript>
-    <div id="noJavaScript">
-      <img id="noJavaScript" src="./imgs/Curiosity-rover-js-error.jpg" alt="JavaScript disabled">
-    </div>
-  </noscript>
 
   <!-- carousel -->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="embed-responsive">
-          <iframe class="embed-responsive-item" src="./imgs/WeatherSystemOnRover.gif" width="600" height="500"
+          <iframe class="embed-responsive-item" src="./imgs/WeatherSystemOnRover.gif" width="600" height="525"
             allowfullscreen></iframe>
         </div>
       </div>
       <div class="carousel-item">
         <div class="embed-responsive">
           <iframe class="embed-responsive-item" src="https://mars.nasa.gov/layout/embed/image/mslweather/"" width=" 600"
-            height="300" scrolling='no' frameborder='0'></iframe>
+            height="525" scrolling='no' frameborder='0'></iframe>
         </div>
       </div>
       <div class="carousel-item">
@@ -179,6 +127,13 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
+    <!-- if JavaScript is disabled, notify user with modal -->
+    <noscript>
+      <div id="noJavaScript">
+        <img id="noJavaScript" src="./imgs/Curiosity-rover-js-error.jpg" alt="JavaScript disabled">
+      </div>
+    </noscript>
 </body>
 
 </html>
