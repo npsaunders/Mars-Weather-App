@@ -59,6 +59,7 @@ const $season = $('#season');
 const $inputSol = $('input[type="date"]');
 const $solNum = $('#solNum');
 
+
 $('form').on('submit', returnDataAndDisplay);
 
 //  ---------  FUNCTIONS  ---------

@@ -115,3 +115,7 @@ td {
     font-size: 14px;
   }
 }
+
+.carousel-inner {
+  flex-direction: row;
+}
