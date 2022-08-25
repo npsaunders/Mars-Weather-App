@@ -32,9 +32,11 @@ Main Table
 <img src="./imgs/Screenshots/MainPage.jpg" alt="main page" width="300"/>
 
 Animation of REMS on Curiosity
+
 <img src="./imgs/WeatherSystemOnRover.gif" alt="animated rover" width="300"/>
 
 iframe of current weather conditions
+
 <img src="./imgs/Screenshots/LatestWeather.jpg" alt="current weather" width="300"/>
 
 Seasonal weather
