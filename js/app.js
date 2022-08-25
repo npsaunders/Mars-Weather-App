@@ -140,7 +140,7 @@ $(document).ready(function () {
       $('#line1').text(" Rover Environmental Monitoring Station (REMS)");
       $('#line2').text("Courtesy NASA / JPL - Caltech");
     } else if ($('#weatherChart').is(":visible")) {
-      $('#line1').text("Weather Chart");
+      $('#line1').text("Current Weather");
       $('#line2').text("Courtesy NASA / JPL - Caltech");
     } else {
       $('#line1').text("Season Chart");
