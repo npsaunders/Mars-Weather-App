@@ -104,8 +104,8 @@ $(document).ready(function () {
     //make sure min/max temps are values and not null. If null, use N/A
     let minTemp = "N/A";
     let maxTemp = "N/A";
-    if (marsWeatherData.min_temp) minTemp = marsWeatherData.min_temp + '\xB0';
-    if (marsWeatherData.max_temp) maxTemp = marsWeatherData.max_temp + '\xB0';
+    if (marsWeatherData.min_temp) minTemp = marsWeatherData.min_temp + '\xB0C';
+    if (marsWeatherData.max_temp) maxTemp = marsWeatherData.max_temp + '\xB0C';
 
     //Temps are in Deg C.  use the \xBOC for degree symbol
     $min_temp.text(minTemp);
