@@ -105,10 +105,11 @@ td {
 
 /* For cell phones */
 @media screen and (max-width: 500px) {
-  body {
-    background-image: none;
+  .borderImgs {
+    border: 4px solid rgba(193, 101, 75, 0.8);
+    border-radius: 50px;
+    width: auto;
   }
-
   div > header,
   .rowLabel,
   #tableHeader {
