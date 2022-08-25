@@ -1,6 +1,8 @@
 **<h1 align="center"> MARS WEATHER APP</h1>**
 
-<img src="./imgs/mars.gif" width="100%">
+<p align="center">
+<img src="./imgs/mars.gif" width="400">
+</p>
 
 ### This app displays historical Martian weather from data collected by the Curiosity rover. The user enters/selects a date and clicks submit. The AJAX API request returns data in JSON format which is then parsed to populate the table.
 
