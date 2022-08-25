@@ -103,6 +103,15 @@ td {
   border-radius: 50px;
 }
 
+/* some top margin for the animated rover & table */
+#carRover {
+  margin-top: 100px;
+}
+
+#tableForm {
+  margin-top: 10px;
+}
+
 /* For cell phones */
 @media screen and (max-width: 500px) {
   .borderImgs {
