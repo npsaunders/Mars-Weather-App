@@ -53,7 +53,7 @@ form > div {
   padding: 3px;
   margin: 3px;
   font-size: 20px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   color: rgba(193, 101, 75, 0.8);
   border: 1px solid rgb(193, 101, 75, 0.8);
 }

@@ -117,3 +117,9 @@ function terrestrialToSols(enteredDate) {
   //convert milliseconds to Martian sols. Key difference is 1 sol is 24.65972 hours
   return Math.floor((elapsedTime / (1000 * 3600 * 24.65972222)));
 }
+
+//Change h3 when slides change
+//first try with the table heading h3
+//if the carousel-item.display is none, the slide isn't active
+const h31 = document.querySelector(".active.carousel-item");
+console.log(h31);
