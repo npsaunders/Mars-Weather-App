@@ -100,9 +100,16 @@ $(document).ready(function () {
   function updateDom() {
     //only get the date in yyyy/mm/dd format
     $earthDt.text(marsWeatherData.terrestrial_date.slice(0, 10));
+
+    //make sure min/max temps are values and not null. If null, use N/A
+    let minTemp = "N/A";
+    let maxTemp = "N/A";
+    if (marsWeatherData.min_temp) minTemp = marsWeatherData.min_temp + '\xB0';
+    if (marsWeatherData.max_temp) maxTemp = marsWeatherData.max_temp + '\xB0';
+
     //Temps are in Deg C.  use the \xBOC for degree symbol
-    $min_temp.text(marsWeatherData.min_temp + '\xB0C');
-    $max_temp.text(marsWeatherData.max_temp + '\xB0C');
+    $min_temp.text(minTemp);
+    $max_temp.text(maxTemp);
     $sunrise.text(marsWeatherData.sunrise);
     $sunset.text(marsWeatherData.sunset);
     $atmCond.text(marsWeatherData.atmo_opacity);
