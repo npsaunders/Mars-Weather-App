@@ -117,7 +117,7 @@ td {
   .borderImgs {
     border: 4px solid rgba(193, 101, 75, 0.8);
     border-radius: 50px;
-    width: auto;
+    width: 400px;
   }
   div > header,
   .rowLabel,
