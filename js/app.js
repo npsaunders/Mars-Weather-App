@@ -118,8 +118,30 @@ function terrestrialToSols(enteredDate) {
   return Math.floor((elapsedTime / (1000 * 3600 * 24.65972222)));
 }
 
-//Change h3 when slides change
-//first try with the table heading h3
-//if the carousel-item.display is none, the slide isn't active
-const h31 = document.querySelector(".active.carousel-item");
-console.log(h31);
+//Change the h3 text when carousel button clicked
+//To do this, need to listen for a carousel button to be clicked.
+//Since there is a 0.6 second transition, need to set a timer
+//to assure the new slide is visible before putting the text
+
+//Listen for carousel button click. 
+//If clicked, delay 0.7secs before calling the function to change the h3 text.
+$('#carouselBut').click(function () {
+  setTimeout(clickCarBut, 700);
+})
+
+//Set the h3 text based on which slide is visible
+function clickCarBut() {
+  if ($('#tableForm').is(":visible")) {
+    $('#line1').text("Curiosity Rover Historical Weather Readings");
+    $('#line2').text("Utilizing the MAAS2 REST API");
+  } else if ($('#carRover').is(":visible")) {
+    $('#line1').text(" Rover Environmental Monitoring Station (REMS)");
+    $('#line2').text("Courtesy NASA / JPL - Caltech");
+  } else if ($('#weatherChart').is(":visible")) {
+    $('#line1').text("Weather Chart");
+    $('#line2').text("Courtesy NASA / JPL - Caltech");
+  } else {
+    $('#line1').text("Season Chart");
+    $('#line2').text("Courtesy NASA / JPL - Caltech");
+  }
+}

@@ -36,8 +36,8 @@
 
     <main id="main">
       <div>
-        <h3>Curiosity Rover Historical Weather Readings</h3>
-        <h3>Utilizing the MAAS2 REST API</h3>
+        <h3 id="line1">Curiosity Rover Historical Weather Readings</h3>
+        <h3 id="line2">Utilizing the MAAS2 REST API</h3>
       </div>
     </main>
   </div>
@@ -104,7 +104,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <div class="embed-responsive">
+        <div id="weatherChart" class="embed-responsive">
           <!-- weather chart -->
           <iframe class="embed-responsive-item borderImgs" src="https://mars.nasa.gov/layout/embed/image/mslweather/"
             width="600" height="515" scrolling='no'>
@@ -112,22 +112,23 @@
         </div>
       </div>
       <div class="carousel-item">
-        <div class="embed-responsive">
+        <div id="seasonChart" class="embed-responsive">
           <!-- season temperature chart -->
-          <img id="weatherChart" class="borderImgs" src='./imgs/Mars_Weather_Chart.jpg' width='600' height='515'
-            scrolling='no'>
+          <img class="borderImgs" src='./imgs/Mars_Weather_Chart.jpg' width='600' height='515' scrolling='no'>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div id="carouselBut">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
 
     <!-- if JavaScript is disabled, notify user with modal -->
