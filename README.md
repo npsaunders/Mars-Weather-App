@@ -62,7 +62,7 @@ Looking to see if it's possible to create an interactive map, of the rover waypo
 
 Due to same origin policy, I cannot directly interact with the iframe, of the NASA map, to get the sol based on location.
 
-<a href="https://mars.nasa.gov/maps/location/?mission=MSL&site=NOW&mapLon=137.39720821380618&mapLat=-4.752126563545443&mapZoom=16&globeLon=137.3978687&globeLat=-4.663687049999997&globeZoom=13&globeCamera=0,-2441.40625,0,0,1,0&panePercents=0,100,0&on=Current Position$1.00,Waypoints$1.00,Surface View$1.00,Rover Path$1.00,Labels$1.00,Basemap$1.00,Gale Crater Map$1.00">Mars Interactive Map</a>
+<a href="https://mars.nasa.gov/maps/location/?mission=MSL&site=NOW&mapLon=137.39720821380618&mapLat=-4.752126563545443&mapZoom=16&globeLon=137.3978687&globeLat=-4.663687049999997&globeZoom=13&globeCamera=0,-2441.40625,0,0,1,0&panePercents=0,100,0&on=Current Position$1.00,Waypoints$1.00,Surface View$1.00,Rover Path$1.00,Labels$1.00,Basemap$1.00,Gale Crater Map$1.00" target="_blank">Mars Interactive Map</a>
 
 Look at slide image heights to reduce "jumping" when clicking the carousel buttons.
 
@@ -70,15 +70,15 @@ Look at slide image heights to reduce "jumping" when clicking the carousel butto
 
 ### **References/License Info**
 
-- **<u>[MAAS2 Mars weather data API](https://maas2.apollorion.com/#/SolToGet)</u>**
+- **<a href="https://www.programmableweb.com/api/maas2-rest-api-v100" target="_blank">MAAS2 Mars Weather Data API</u>**
 
-- **<u>[NASA image policy](https://www.nasa.gov/multimedia/guidelines/index.html)</u>**
+- **<a href="https://www.nasa.gov/multimedia/guidelines/index.html" target="_blank">NASA Image Policy</u>**
 
-- **<u>[JPL/Cal Tech image policy](https://www.jpl.nasa.gov/jpl-image-use-policy)</u>**
+- **<a href="https://www.jpl.nasa.gov/jpl-image-use-policy" target="_blank">JPL/Cal-Tech Image Policy</u>**
+
+- **<a href="https://getbootstrap.com/docs/4.0/about/license/#:~:text=Bootstrap%20is%20released%20under%20the%20MIT%20license%20and%20is%20copyright%202018%20Twitter" target="_blank">Bootstrap License Policy</u>**
 
 - **<u>[Averox font license](./font/!license.txt)</u>**
-
-- **<u>[Bootstrap license policy](https://getbootstrap.com/docs/4.0/about/license/#:~:text=Bootstrap%20is%20released%20under%20the%20MIT%20license%20and%20is%20copyright%202018%20Twitter)</u>**
 
 ![StackOverflow](./imgs/StackOverflow.png)
 
