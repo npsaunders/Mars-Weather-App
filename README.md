@@ -29,19 +29,19 @@ The **<u>[Curiosity Rover](https://mars.nasa.gov/msl/home/)</u>** landed on Mars
 
 Main Table
 
-<img src="./imgs/Screenshots/MainPage.jpg" alt="main page" width="300"/>
+<img src="./imgs/Screenshots/MainPage.jpg" alt="main page" width="400"/>
 
 Animation of REMS on Curiosity
 
-<img src="./imgs/WeatherSystemOnRover.gif" alt="animated rover" width="300"/>
+<img src="./imgs/WeatherSystemOnRover.gif" alt="animated rover" width="400"/>
 
 iframe of current weather conditions
 
-<img src="./imgs/Screenshots/LatestWeather.jpg" alt="current weather" width="300"/>
+<img src="./imgs/Screenshots/LatestWeather.jpg" alt="current weather" width="400"/>
 
 Seasonal weather
 
-<img src="./imgs/Screenshots/Seasons.jpg" alt="animated rover" width="300"/>
+<img src="./imgs/Screenshots/Seasons.jpg" alt="animated rover" width="400"/>
 
 ---
 
