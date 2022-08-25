@@ -22,6 +22,11 @@ body {
 h1 {
   font-size: 75px;
 }
+
+h3 {
+  font-family: "Averox", Helvetica, Arial, sans-serif;
+}
+
 div > header,
 .rowLabel,
 #tableHeader {
