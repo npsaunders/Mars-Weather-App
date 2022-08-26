@@ -29,38 +29,41 @@
 //
 //
 
-// Show the main content if JavaScript is enabled.
-// If JavaScript can't be loaded, only show the <noscript> error image
-$('#main').css('display', 'flex');
-
-//get today's date in the form mm/dd/yyyy. This will be used to set the calendar date picker's last valid date that can be selected (no future dates).
-const caldrMaxDate = new Date().toISOString().slice(0, 10);
-
-//now set the max date attribute in the date picker.
-$('#start').attr("max", caldrMaxDate);
-
-
-// ---------  VARIABLES  ---------
-
-//set maxDate to today's date. 
-const maxDate = new Date();
-
-//Curiosity start date = '2012-08-05' = 0 sols
-const missionStartDate = new Date('2012-08-05');
-
-let marsWeatherData, userInput;
-const $earthDt = $('#earthDt');
-const $min_temp = $('#minTemp');
-const $max_temp = $('#maxTemp');
-const $sunrise = $('#sunrise');
-const $sunset = $('#sunset');
-const $atmCond = $('#atmCond');
-const $season = $('#season');
-const $inputSol = $('input[type="date"]');
-const $solNum = $('#solNum');
-
 //Make sure jQuery is loaded
 $(document).ready(function () {
+
+  // Show the main content if JavaScript is enabled.
+  // If JavaScript can't be loaded, only show the <noscript> error image
+  $('#main').css('display', 'flex');
+  $('#tableForm').addClass('active');
+  //get today's date in the form mm/dd/yyyy. This will be used to set the calendar date picker's last valid date that can be selected (no future dates).
+  const caldrMaxDate = new Date().toISOString().slice(0, 10);
+
+  //now set the max date attribute in the date picker.
+  $('#start').attr("max", caldrMaxDate);
+
+
+  // ---------  VARIABLES  ---------
+
+  //set maxDate to today's date. 
+  const maxDate = new Date();
+
+  //Curiosity start date = '2012-08-05' = 0 sols
+  const missionStartDate = new Date('2012-08-05');
+
+  let marsWeatherData, userInput;
+  const $earthDt = $('#earthDt');
+  const $min_temp = $('#minTemp');
+  const $max_temp = $('#maxTemp');
+  const $sunrise = $('#sunrise');
+  const $sunset = $('#sunset');
+  const $atmCond = $('#atmCond');
+  const $season = $('#season');
+  const $inputSol = $('input[type="date"]');
+  const $solNum = $('#solNum');
+
+  // //Make sure jQuery is loaded
+  // $(document).ready(function () {
 
   $('form').on('submit', returnDataAndDisplay);
 
