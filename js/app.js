@@ -32,17 +32,6 @@
 //Make sure jQuery is loaded
 $(document).ready(function () {
 
-  // Show the main content if JavaScript is enabled.
-  // If JavaScript can't be loaded, only show the <noscript> error image
-  $('#main').css('display', 'flex');
-  $('#tableForm').addClass('active');
-  //get today's date in the form mm/dd/yyyy. This will be used to set the calendar date picker's last valid date that can be selected (no future dates).
-  const caldrMaxDate = new Date().toISOString().slice(0, 10);
-
-  //now set the max date attribute in the date picker.
-  $('#start').attr("max", caldrMaxDate);
-
-
   // ---------  VARIABLES  ---------
 
   //set maxDate to today's date. 
@@ -62,13 +51,30 @@ $(document).ready(function () {
   const $inputSol = $('input[type="date"]');
   const $solNum = $('#solNum');
 
-  // //Make sure jQuery is loaded
-  // $(document).ready(function () {
+  //-------------------
 
+  // Show the main content if JavaScript is enabled.
+  // If JavaScript can't be loaded, only show the <noscript> error image
+  $('#main').css('display', 'flex');
+
+  //add the class active to the first carousel slide so it can be displayed
+  $('#tableForm').addClass('active');
+
+  //get today's date in the form mm/dd/yyyy. This will be used to set the calendar date picker's last valid date that can be selected (no future dates).
+  const caldrMaxDate = new Date().toISOString().slice(0, 10);
+
+  //now set the max date attribute in the date picker.
+  $('#start').attr("max", caldrMaxDate);
+
+  //When clicking submit call the returnDataAndDisplay Function
   $('form').on('submit', returnDataAndDisplay);
+
 
   //  ---------  FUNCTIONS  ---------
 
+  //Purpose: Prevent page refresh after clicking the Submit button, get the user input
+  //pass the user input to the ajax request, and if the data comes back correctly, call
+  //the updateDom function to update the table data and display
   function returnDataAndDisplay(event) {
     //prevents page refresh after clicking the submit button
     event.preventDefault();
@@ -79,13 +85,13 @@ $(document).ready(function () {
     // AJAX call to get data
     $.ajax({
       url: 'https://api.maas2.apollorion.com/' + userInput
-    }).then(
       // if ok then continue to update the DOM
+    }).then(
       (data) => {
         marsWeatherData = data;
         updateDom();
       },
-      // If there's no data or an issue, just put in N/A for the values
+      // If there's no data or an issue, just put a message into the fields
       (error) => {
         $earthDt.text('Error');
         $min_temp.text('No');
@@ -95,11 +101,11 @@ $(document).ready(function () {
         $atmCond.text('That');
         $season.text('Date');
         $solNum.text('  ');
-        // alert("There was an issue with data retrieval.")
       }
     );
   }
 
+  //purpose: get returned data, extract what's needed, update the DOM so it can be displayed
   function updateDom() {
     //only get the date in yyyy/mm/dd format
     $earthDt.text(marsWeatherData.terrestrial_date.slice(0, 10));
@@ -126,6 +132,7 @@ $(document).ready(function () {
   function terrestrialToSols(enteredDate) {
     //first convert the date entered into milliseconds and subtract the 2 times to get elapsed time in milliseconds
     const elapsedTime = new Date(enteredDate).getTime() - missionStartDate.getTime();
+
     //convert milliseconds to Martian sols. Key difference is 1 sol is 24.65972 hours
     return Math.floor((elapsedTime / (1000 * 3600 * 24.65972222)));
   }

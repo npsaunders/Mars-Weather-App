@@ -27,23 +27,36 @@ h3 {
   font-family: "Averox", Helvetica, Arial, sans-serif;
 }
 
-div > header,
-.rowLabel,
-#tableHeader {
-  font-size: 50px;
-  font-family: "Averox", Helvetica, Arial, sans-serif;
-  align-content: center;
-}
+/* ***** Check for if Javascript is enabled or not ******
 
 /* Start off with display none. If JavaScript is working, the JavaScript code will change the display to flex. Else, the main content will not display and the noscript image will show up. */
 #main {
   display: none;
 }
 
+/* If JavaScript doesn't work, display an image */
+#noJavaScript > img {
+  height: 400px;
+  width: 500px;
+  border-radius: 50px;
+}
+
+/*  End with javascript and no javascript code */
+/* ******************************************* */
+
+/******* Main Content & Carousel  ***************/
 div {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+div > header,
+.rowLabel,
+#tableHeader {
+  font-size: 50px;
+  font-family: "Averox", Helvetica, Arial, sans-serif;
+  align-content: center;
 }
 
 form > div {
@@ -90,19 +103,12 @@ td {
   border-collapse: collapse;
 }
 
-/* If JavaScript doesn't work, display an image */
-#noJavaScript > img {
-  height: 400px;
-  width: 500px;
-  border-radius: 50px;
-}
-
 /* center the frames & table in the carousel */
 .carousel-inner {
   flex-direction: row;
 }
 
-/* put border around the 3 carousel images */
+/* put border around the 3 carousel images and give a large radius*/
 .borderImgs {
   border: 4px solid rgba(193, 101, 75, 0.8);
   border-radius: 50px;
@@ -117,6 +123,7 @@ td {
   margin-top: 15px;
 }
 
+/* **** Mobile Responsive code  *********** */
 /* For cell phones */
 @media screen and (max-width: 500px) {
   .borderImgs {
