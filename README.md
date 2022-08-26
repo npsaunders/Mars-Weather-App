@@ -74,6 +74,8 @@ Enter/select a date and click submit. If there is available data, for that day, 
 
 - **<a href="https://www.programmableweb.com/api/maas2-rest-api-v100" target="_blank">MAAS2 Mars Weather Data API</u>**
 
+- **<a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</u>**
+
 - **<a href="https://www.nasa.gov/multimedia/guidelines/index.html" target="_blank">NASA Image Policy</u>**
 
 - **<a href="https://www.jpl.nasa.gov/jpl-image-use-policy" target="_blank">JPL/Cal-Tech Image Policy</u>**
