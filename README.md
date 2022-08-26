@@ -38,21 +38,9 @@ Enter/select a date and click submit. If there is available data, for that day, 
 
 ### **Screenshots**
 
-Main Table
-
-<img src="./imgs/Screenshots/MainPage.jpg" alt="main page" width="400"/>
-
-Animation of REMS on Curiosity
-
-<img src="./imgs/WeatherSystemOnRover.gif" alt="animated rover" width="400"/>
-
-iframe of current weather conditions
-
-<img src="./imgs/Screenshots/LatestWeather.jpg" alt="current weather" width="400"/>
-
-Seasonal weather
-
-<img src="./imgs/Screenshots/Seasons.jpg" alt="animated rover" width="400"/>
+<br>
+<p align="center">
+<img src="./imgs/Screenshots/MarsScreenShot.gif" alt="main page" width="800"/></p>
 
 ---
 
